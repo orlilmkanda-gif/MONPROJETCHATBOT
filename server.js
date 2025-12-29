@@ -6,13 +6,32 @@ app.use(express.json());
 
 app.post("/webhook", (req, res) => {
   const incomingMessage = req.body;
-  console.log("📩 Message reçu :", incomingMessage);
+  const texte = incomingMessage.text.toLowerCase();
+  let reponse = "";
+
+  if (texte.includes("bonjour")) {
+    reponse =
+      "Bonjour 👋 Je suis MWALIMU, assistant scolaire et aide pédagogique.";
+  } 
+  else if (texte.includes("fraction")) {
+    reponse =
+      "D’accord 👍 parlons des fractions.\n\n" +
+      "👉 Une fraction sert à représenter une partie d’un tout.\n\n" +
+      "👉 Par exemple : si un gâteau est partagé en 4 parts égales et que tu prends 1 part, on écrit 1/4.\n\n" +
+      "👉 Réfléchis : si tu prends 2 parts sur 4, comment écrirais-tu la fraction ?";
+  } 
+  else if (texte.includes("addition")) {
+    reponse =
+      "L’addition sert à ajouter des nombres. Par exemple : 2 + 3 = 5.";
+  } 
+  else {
+    reponse =
+      "Je suis MWALIMU. Pose-moi une question scolaire et je t’aiderai à comprendre.";
+  }
 
   const reply = {
     to: incomingMessage.from,
-    text: `Bonjour 👋
-Je suis MWALIMU AI.
-Je vais t’aider à comprendre ta leçon, étape par étape.`
+    text: reponse
   };
 
   console.log("📤 Réponse envoyée :", reply);
