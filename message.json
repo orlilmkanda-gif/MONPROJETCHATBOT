@@ -1,0 +1,19 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "changes": [
+        {
+          "value": {
+            "messages": [
+              {
+                "from": "22501020304",
+                "text": {"body": "Bonjour MWALIMU 👋"}
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
