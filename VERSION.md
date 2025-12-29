@@ -1,4 +1,4 @@
-# MWALIMU – Version 0.1
+﻿# MWALIMU – Version 0.1
 
 ## Description
 MWALIMU est un assistant pédagogique scolaire.
