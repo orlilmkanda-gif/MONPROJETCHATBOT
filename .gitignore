@@ -1,0 +1,4 @@
+node_modules/
+conversations.json
+*.log
+cloudflared-windows-amd64.exe
